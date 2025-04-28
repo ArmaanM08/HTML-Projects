@@ -4,4 +4,5 @@
 
 
 https://github.com/user-attachments/assets/098f1434-4a6b-4a18-81fa-1651d846d0f5
-
+<h1>Day-8-Punishment-Assignment</h1>
+<img width="683" alt="Screenshot 2025-04-28 at 2 59 28 PM" src="https://github.com/user-attachments/assets/fd168919-3a42-4d85-b5c1-bfafc98f7869" />
