@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>Day-8 Tasks
+        <style>
+            input[type="text"], input[type="email"], input[type="password"] {
+              padding: 10px;
+              margin: 5px;
+              width: 100%;
+              border: 1px solid #ccc;
+            }
+            button {
+              padding: 10px 20px;
+              background-color: #4CAF50;
+              color: white;
+              border: none;
+              cursor: pointer;
+            }
+            button:hover {
+              background-color: #45a049;
+            }
+          </style>
+          
+    </head>
+    <body>
+        <!--...Task-1...-->
+        <div class="Task-1">
+            <form action="/submit-form" method="POST">
+                <label for="name">Name: </label>
+                <input type="text" id="Name" name="name" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!--...Task-2...-->
+        <div class="Task-2">
+            <form action="/submit-form" method="POST">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+            </form>
+        </div>
+        <!--...Task-3...-->
+        <div class="Task-3">
+            <form action="/submit-form" method="POST">
+                <label for="subscribe">Subscribe to newsletter</label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label>Choose your favourite color</label>
+                <input type="radio" id="red" name="color" value="red">
+                <input type="radio" id="green" name="color" value="green">
+                <input type="radio" id="blue" name="color" value="blue">
+            </form>
+        </div>
+        <!--...Task-4...-->
+        <div class="Task-4">
+            <form action="/submit-form" method="POST">
+                <label for="city">Select your favourite city</label>
+                <select id="city" name="city">
+                    <option value="mum">Mumbai</option>
+                    <option value="ban">Banglore</option>
+                    <option value="del">Delhi</option>
+                </select>
+            </form>
+        </div>
+        <div class="Task-5">
+            <form action="/submit-form" method="POST">
+                <label for="comments">Comments</label>
+                <textarea if="comments" name="comments" rows="4" cols="50"></textarea>      
+            </form>
+        </div>
+        <div class="Task-6">
+            <form action="/submit-form" method="POST">
+                <label for="file">Upload Your Resume</label>
+                <input type="file" id="file" name="resume">
+            </form>
+        </div>
+        <div class="Task-7">
+            <form action="/submit-form" method="POST">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" onclick="alert('Hello!')">Click Me</button>
+            </form>
+        </div>
+        <div class="Task-8">
+            <form action="/submit-form" method="POST">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name">
+                  </fieldset>
+            </form>
+        </div>
+        <div class="Task-9">
+            <form action="/submit-form" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" pattern="\d{3}[-]\d{3}[-]\d{4}" required>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" required>
+            </form>
+        </div>
+        <div class="Task-10">
+            <form action="/submit-form.php" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="Task-11">
+            <form action="login.php" method="POST">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required>
+                <button type="submit">Login</button>
+              </form>
+              
+              <form action="register.php" method="POST">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="email" required>
+                <button type="submit">Register</button>
+              </form>              
+        </div>
+        <div class="12">
+            <form action="login.php" method="POST">
+                <input type="hidden" name="user_id" value="12345">
+            </form>
+        </div>
+    </body>
+</html>
