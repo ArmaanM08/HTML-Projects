@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Effects Gallery</title>
+  <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+      }
+      
+      .gallery-title {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 2rem;
+        color: #333;
+      }
+      
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+      .card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        transition: all 0.4s ease-in-out;
+      }
+      
+      /* === 1. Zoom === */
+      .zoom:hover img {
+        transform: scale(1.2);
+      }
+      
+      /* === 2. Rotate === */
+      .rotate:hover img {
+        transform: rotate(5deg) scale(1.05);
+      }
+      
+      /* === 3. Grayscale to Color === */
+      .grayscale img {
+        filter: grayscale(100%);
+        transition: filter 0.4s;
+      }
+      .grayscale:hover img {
+        filter: grayscale(0%);
+      }
+      
+      /* === 4. Overlay with Text === */
+      .overlay .overlay-text {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 0.4s ease;
+      }
+      .overlay:hover .overlay-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* === 5. Blur + Scale === */
+      .blur-scale:hover img {
+        transform: scale(1.2);
+        filter: blur(2px);
+      }
+      
+      /* === 6. Skew + Opacity === */
+      .skew img {
+        transform: skewX(0deg);
+        transition: transform 0.4s, opacity 0.4s;
+      }
+      .skew:hover img {
+        transform: skewX(-10deg);
+        opacity: 0.7;
+      }
+      
+      /* === 7. Slide-in Text === */
+      .slide-caption {
+        position: absolute;
+        bottom: 10px;
+        left: -100%;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px 15px;
+        transition: left 0.4s ease;
+      }
+      .slide-text:hover .slide-caption {
+        left: 10px;
+      }
+      
+      /* === 8. Glow on Hover === */
+      .glow:hover {
+        box-shadow: 0 0 20px rgba(0, 150, 255, 0.7);
+      }
+  </style>
+</head>
+<body>
+
+  <h1 class="gallery-title">CSS Image Gallery with Unique Hover Effects</h1>
+
+  <div class="gallery">
+    <div class="card zoom">
+      <img src="https://greatruns.com/wp-content/uploads/2023/10/Tokyo-Cover-Flickr-SeanPavonePhoto-Fotolia.jpg" alt="Zoom Effect">
+    </div>
+
+    <div class="card rotate">
+      <img src="https://image.kkday.com/v2/image/get/w_960%2Cc_fit%2Cq_55%2Ct_webp/s1.kkday.com/product_147336/20230908031131_Jo6iV/jpg" alt="Rotate Effect">
+    </div>
+
+    <div class="card grayscale">
+      <img src="https://static.independent.co.uk/2023/08/07/12/iStock-587787576%20shanghai.jpg?width=1200" alt="Grayscale to Color">
+    </div>
+
+    <div class="card overlay">
+      <img src="https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2025/01/Places-To-Visit-In-Dhaka-Cover-Image-840x425.jpg" alt="Overlay Text">
+      <div class="overlay-text">Hello World</div>
+    </div>
+
+    <div class="card blur-scale">
+      <img src="https://www.lufthansa.com/content/dam/lh/article-images/south-america/lh_blog_sao-paulo_river_bridge_getty878377556_1920x1080.jpg.transform/lh-dcep-transform-width-1440/img.jpg" alt="Blur and Scale">
+    </div>
+
+    <div class="card skew">
+      <img src="https://media.gadventures.com/media-server/dynamic/blogs/posts/G-Adventures/2024/10/Things_to_do_in_Cairo.webp" alt="Skew Effect">
+    </div>
+
+    <div class="card slide-text">
+      <img src="https://afar.brightspotcdn.com/dims4/default/94017a2/2147483647/strip/false/crop/3000x1500+0+0/resize/1486x743!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2F22%2Fa3%2Fbf9b1d384ca8a9dcb732491dfadf%2Ftravelguide-mexicocity-ramiroreynajr.jpg" alt="Slide In Text">
+      <div class="slide-caption">Nice View</div>
+    </div>
+
+    <div class="card glow">
+      <img src="https://thumbs.dreamstime.com/b/great-wall-china-one-greatest-wonders-world-was-listed-as-world-heritage-unesco-baijing-april-157207758.jpg" alt="Border Glow">
+    </div>
+  </div>
+
+</body>
+</html>
