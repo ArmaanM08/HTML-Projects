@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Blog Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 20px;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      border-radius: 8px;
+    }
+
+    main {
+      grid-area: main;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #eaf0f6;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      🌟 My Awesome Blog
+    </header>
+
+    <main>
+      <h2>Welcome to My Blog</h2>
+      <p><h1>The Unexpected Symphony of a Rainy Morning</h1> 
+
+<h4>The sky this morning over Mohpada Alias Wasambe decided to orchestrate a spontaneous symphony. Not the gentle pitter-patter you might expect, but a full-bodied percussion solo that woke me with a jolt. The kind of rain that drums insistently on the tin roof, turning it into an impromptu instrument.
+
+Initially, my inner grump grumbled. Sleep, that elusive treasure, was being so rudely interrupted. But as I lay there, listening to the escalating rhythm, something shifted. The intensity of the downpour was almost… hypnotic. Each drop seemed to have its own story, a tiny messenger hurtling from the clouds to join the watery chorus below.
+
+Looking out the window, the world had transformed. The familiar greens of the trees and the dusty hues of the ground were now slick and vibrant, reflecting the grey sky like a distorted mirror. The air, thick with the scent of wet earth, carried a freshness that felt almost primal.
+
+There’s a certain magic in being forced to slow down by the weather. Plans might get derailed, errands postponed, but there’s also an invitation to simply *be*. To watch the drama unfold outside, to listen to the earth drinking deeply, to find a quiet corner and perhaps lose yourself in a book or a cup of something warm.
+
+I found myself drawn to the window, watching a lone cow seek shelter under the broad leaves of a mango tree, its dark coat glistening with raindrops. A few stray dogs trotted past, their tails tucked between their legs, looking comically miserable. Even the usually boisterous birds seemed to have taken a temporary vow of silence.
+
+This unexpected symphony of the rain isn't just noise; it's a reminder of the power and beauty of nature's raw energy. It washes away the dust, both literal and metaphorical, leaving behind a sense of renewal. It’s a chance to pause, to breathe, and to appreciate the simple, yet profound, act of the world around us doing its thing.
+
+So, as the rain continues its relentless rhythm outside my window, I find myself no longer grumbling, but rather, listening intently. This unexpected symphony, it turns out, is rather beautiful after all. And sometimes, the most beautiful moments are the ones that arrive uninvited, shaking us out of our routines and reminding us to pay attention.</h4></p>
+    </main>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <ul>
+        <li>🔗 Recent Posts</li>
+        <li>📁 Categories</li>
+        <li>📨 Subscribe</li>
+      </ul>
+    </aside>
+
+    <footer>
+      © 2025 Armaan's Blog | Built with HTML and CSS
+    </footer>
+  </div>
+</body>
+</html>
